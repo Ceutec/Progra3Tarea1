@@ -5,72 +5,140 @@ using namespace std;
 //Devuelve la suma de a (dado) y b (dado)
 int sumar(int a, int b)
 {
-    return -1;
+    return a+b;
 }
 
 //Devuelve la resta de a (dado) y b (dado)
 int restar(int a, int b)
 {
-    return -1;
+    return a-b;
 }
 
 //Devuelve la multiplicacion de a (dado) y b (dado)
 int multiplicar(int a, int b)
 {
-    return -1;
+    return a*b;
 }
 
 //Devuelve la division de a (dado) y b (dado)
 int dividir(int a, int b)
 {
-    return -1;
+    return a/b;
 }
 
 //Devuelve el numero mayor entre a (dado) y b (dado)
 int getMayor(int a, int b)
 {
-    return -1;
+    if (a>b)
+    {
+    return a ;
+    }
+    else
+    {
+     return b ;
+    }
+
 }
 
 //Devuelve el numero mayor entre a (dado) y b (dado)
 int getMenor(int a, int b)
 {
-    return -1;
+      if (a<b)
+    {
+    return a ;
+    }
+    else
+    {
+     return b ;
+    }
 }
 
 //Devuelve el numero mayor entre a (dado), b (dado) y c (dado)
 int getMayor(int a, int b, int c)
 {
-    return -1;
+         if (a>b)
+    {
+        if (a>c)
+        {
+
+            return a ;
+        }
+        else
+        {
+
+           return c;
+        }
+
+
+    }
+    else
+    {
+        if (b>c)
+        {
+
+            return b ;
+        }
+        else
+        {
+
+           return c;
+        }
+
+    }
+
 }
 
 //Establece el valor (dado) en el arreglo (dado) en el indice posicion (dado)
 void setValor(int arreglo[], int valor, int posicion)
 {
+    arreglo[posicion]=valor;
 }
 
 //Obtiene y devuelve el valor del arreglo (dado) en el indice posicion (dado)
 int getValor(int arreglo[], int posicion)
 {
-    return -1;
+
+   return arreglo[posicion];
 }
 
 //Devuelve el numero mayor del arreglo (dado) que contiene tamano (dado) elementos
 int getMayor(int arreglo[], int tamano)
 {
-    return -1;
+    for (int x=0; x<tamano; x++)
+    {
+        if (arreglo[x]>arreglo[x+1])
+        {
+        return arreglo[x];
+        }
+
+    }
 }
 
 //Devuelve el numero menor del arreglo (dado) que contiene tamano (dado) elementos
 int getMenor(int arreglo[], int tamano)
 {
-    return -1;
+    int a=arreglo[0];
+    for (int x=0; x<tamano; x++)
+    {
+       if (arreglo[x]<a)
+        {
+            a=arreglo[x];
+        //return a;
+        }
+
+    }
+    return a;
 }
 
 //Devuelve el promedio de los numeros del arreglo (dado) que contiene tamano (dado) elementos
 int getPromedio(int arreglo[], int tamano)
 {
-    return -1;
+    double suma=0;
+    for (int x=0;x<tamano;x++)
+    {
+        suma+=arreglo[x];
+    }
+    return suma/tamano;
 }
 
 int main ()
